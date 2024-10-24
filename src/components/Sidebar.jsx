@@ -26,7 +26,7 @@ export default function Sidebar() {
       variant="permanent"
       sx={{
         display: { xs: 'none', md: 'block' },
-        backgroundColor:'gray',
+        
         
       }}
     >
