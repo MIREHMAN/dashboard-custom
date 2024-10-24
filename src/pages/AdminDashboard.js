@@ -1,15 +1,18 @@
 import * as React from 'react';
 
 import { alpha } from '@mui/material/styles';
+
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import AppNavbar from './DashboardComponents/AppNavbar';
 import Header from './DashboardComponents/Header';
 import SideMenu from './DashboardComponents/SideMenu';
+import AppTheme from './theme/shared-theme/AppTheme';
+
 import DashboardContent from './DashboardComponents/DashboardContent';
 
 
-export default function AdminDashboard(props) {
+export default function AdminDashboard() {
   return (
     
       <Box sx={{ display: 'flex' }}>
@@ -20,9 +23,7 @@ export default function AdminDashboard(props) {
           component="main"
           sx={(theme) => ({
             flexGrow: 1,
-            backgroundColor: theme.vars
-              ? `rgba(${theme.vars.palette.background.defaultChannel} / 1)`
-              : alpha(theme.palette.background.default, 1),
+            backgroundColor: 'grey',
             overflow: 'auto',
           })}
         >
@@ -40,6 +41,6 @@ export default function AdminDashboard(props) {
           </Stack>
         </Box>
       </Box>
-   
+    
   );
 }
