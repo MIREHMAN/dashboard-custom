@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Avatar from '@mui/material/Avatar';
-import MuiDrawer, { drawerClasses } from '@mui/material/Drawer';
+import MuiDrawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-
+import MenuContent from './MenuContent';
+import OptionsMenu from './OptionsMenu';
 
 const drawerWidth = 240;
 
@@ -14,6 +15,7 @@ const Drawer = styled(MuiDrawer)({
   width: drawerWidth,
   flexShrink: 0,
   boxSizing: 'border-box',
+  
   mt: 10,
   
 });
@@ -24,20 +26,21 @@ export default function Sidebar() {
       variant="permanent"
       sx={{
         display: { xs: 'none', md: 'block' },
+        backgroundColor:'gray',
         
       }}
     >
       <Box
         sx={{
           display: 'flex',
-         
+          
           p: 1.5,
         }}
       >
-        
+        <Typography>Dashboard</Typography>
       </Box>
      
-      Menu Content
+      <MenuContent/>
       <Divider />
       
       <Stack
@@ -64,7 +67,7 @@ export default function Sidebar() {
             riley@email.com
           </Typography>
         </Box>
-        Options MenU
+        <OptionsMenu/>
       </Stack>
     </Drawer>
   );
